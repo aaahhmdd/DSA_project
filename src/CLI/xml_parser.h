@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
+#include <fstream>
 using namespace std;
 bool validateXML(const string& filePath, vector<string>& errors);
 string prettifyXML(const string& xmlContent);
