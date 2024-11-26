@@ -5,10 +5,13 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-using namespace std;
-bool validateXML(const string& filePath, vector<string>& errors);
-string prettifyXML(const string& xmlContent);
-string minifyXML(const string& xmlContent);
-string fixXML(const string& xmlContent);
+#include <stack>
+#include <sstream>
+void writeFile(const std::string& filePath, const std::string& content);
+std::string readFile(const std::string& filePath);
+bool validateXML(const std::string& xmlContent, std::vector<std::string>& errors);
+std::string prettifyXML(const std::string& xmlContent);
+std::string minifyXML(const std::string& xmlContent);
+std::string fixXML(const std::string& xmlContent);
 
 #endif // XML_PARSER_H
