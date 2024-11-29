@@ -109,12 +109,19 @@ void compressXML(const string& inputFile, const string& outputFile) {
     writeCompressedFile(outputFile, dictionary, compressedContent); // Write to the compressed file
 }
 
-int main() {
-    string inputFile = "C:\\Users\\hooss\\Downloads\\dsa\\dsa.txt";
-    string outputFile = "C:\\Users\\hooss\\Downloads\\dsa\\hussam.txt";
+nt main() {
+    string inputFile, outputFile;
 
-    compressXML(inputFile, outputFile);
+    // Prompt user to input the path for the input file (compressed file)
+    cout << "Enter the path of the input (compressed) file: ";
+    getline(cin, inputFile);
 
-    return 0;
+    // Prompt user to input the path for the output file (where decompressed content will be saved)
+    cout << "Enter the path for the output (decompressed) file: ";
+    getline(cin, outputFile);
+
+    // Call the decompress function with user-provided file paths
+    decompressFile(inputFile, outputFile);
+
+    return 0;
 }
-
