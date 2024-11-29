@@ -75,10 +75,16 @@ void decompressFile(const string& inputFile, const string& outputFile) {
 }
 
 int main() {
-    string inputFile = "C:\\Users\\hooss\\Downloads\\dsa\\hussam.txt";
-    string outputFile = "C:\\Users\\hooss\\Downloads\\dsa\\decompressed_dsa.txt";
+    string inputFile, outputFile;
 
-    decompressFile(inputFile, outputFile);
+    // Ask the user for input and output file paths
+    cout << "Enter the path of the compressed file: ";
+    getline(cin, inputFile); // Read the input file path
+
+    cout << "Enter the path of the output file: ";
+    getline(cin, outputFile); // Read the output file path
+
+    decompressFile(inputFile, outputFile); // Pass the paths to the decompress function
 
     return 0;
 }
