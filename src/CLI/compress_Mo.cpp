@@ -109,7 +109,7 @@ void compressXML(const string& inputFile, const string& outputFile) {
     writeCompressedFile(outputFile, dictionary, compressedContent); // Write to the compressed file
 }
 
-nt main() {
+int main() {
     string inputFile, outputFile;
 
     // Prompt user to input the path for the input file (compressed file)
