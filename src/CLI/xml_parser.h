@@ -7,6 +7,7 @@
 #include <fstream>
 #include <stack>
 #include <sstream>
+#include <algorithm>
 void writeFile(const std::string& filePath, const std::string& content);
 std::string readFile(const std::string& filePath);
 bool validateXML(const std::string& xmlContent, std::vector<std::string>& errors);

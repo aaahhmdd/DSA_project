@@ -1,4 +1,5 @@
 #include "xml_parser.h"
+
 using namespace std;
 string readFile(const string& filePath) {
     ifstream file(filePath);  // Open the file
@@ -23,11 +24,12 @@ void writeFile(const string& filePath, const string& content) {
 bool validateXML(const string& xmlContent, vector<string>& errors);
 // Validates XML for consistency. Returns true if valid, false otherwise. Populates `errors` if invalid.
 
-string prettifyXML(const string& xmlContent){
+string prettifyXML(const string& xmlContent) {
     stringstream result;
-    stack<string> tagStack;            // Stack to track open tags
-    int indentLevel = 0;               // Tracks current indentation level
-    const string indent = "    ";      // Four spaces for indentation
+    stack<string> tagStack;  // Stack to track open tags
+    int indentLevel = 0;     // Tracks current indentation level
+    const string indent = "    ";  // Four spaces for indentation
+    bool previousTag = false;  // Tracks if the last processed item was a tag
 
     size_t i = 0;
     while (i < xmlContent.size()) {
@@ -45,20 +47,27 @@ string prettifyXML(const string& xmlContent){
                 if (!tagStack.empty() && tag.substr(2, tag.size() - 3) == tagStack.top()) {
                     tagStack.pop(); // Pop the matching opening tag
                 }
-            }  else { // Opening tag
+                previousTag = true;
+            } else { // Opening tag
+                if (previousTag) {
+                    result << "\n";  // Add one blank line before new block
+                }
                 result << string(indentLevel * indent.size(), ' ') << tag << "\n";
                 tagStack.push(tag.substr(1, tag.size() - 2)); // Push the tag name
                 indentLevel++;
+                previousTag = true;
             }
 
             i = endPos + 1;
         } else { // Content between tags
             size_t endPos = xmlContent.find('<', i);
             string content = xmlContent.substr(i, endPos - i);
+            content.erase(remove(content.begin(), content.end(), '\n'), content.end()); // Remove internal newlines
             if (!content.empty()) {
                 result << string(indentLevel * indent.size(), ' ') << content << "\n";
             }
             i = endPos;
+            previousTag = false;
         }
     }
 
