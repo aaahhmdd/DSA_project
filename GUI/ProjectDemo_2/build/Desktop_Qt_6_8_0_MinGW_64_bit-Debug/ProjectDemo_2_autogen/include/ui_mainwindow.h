@@ -39,7 +39,8 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton;
     QPushButton *pushButton_6;
-    QWidget *widget;
+    QPushButton *pushButton_8;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
@@ -52,7 +53,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(599, 490);
+        MainWindow->resize(636, 496);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         layoutWidget = new QWidget(centralwidget);
@@ -107,20 +108,23 @@ public:
 
         verticalLayout_2->addWidget(pushButton_6);
 
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(220, 7, 351, 231));
-        verticalLayout_3 = new QVBoxLayout(widget);
+        pushButton_8 = new QPushButton(centralwidget);
+        pushButton_8->setObjectName("pushButton_8");
+        pushButton_8->setGeometry(QRect(40, 440, 56, 18));
+        layoutWidget2 = new QWidget(centralwidget);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(220, 7, 351, 231));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget2);
         verticalLayout_3->setObjectName("verticalLayout_3");
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget2);
         label_2->setObjectName("label_2");
 
         horizontalLayout->addWidget(label_2);
 
-        pushButton_7 = new QPushButton(widget);
+        pushButton_7 = new QPushButton(layoutWidget2);
         pushButton_7->setObjectName("pushButton_7");
 
         horizontalLayout->addWidget(pushButton_7);
@@ -128,7 +132,7 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout);
 
-        textEdit_2 = new QTextEdit(widget);
+        textEdit_2 = new QTextEdit(layoutWidget2);
         textEdit_2->setObjectName("textEdit_2");
         textEdit_2->setReadOnly(true);
 
@@ -137,7 +141,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 599, 18));
+        menubar->setGeometry(QRect(0, 0, 636, 18));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -159,6 +163,7 @@ public:
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "To json", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "is_balanced", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "prettify", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("MainWindow", "map it", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Output", nullptr));
         pushButton_7->setText(QCoreApplication::translate("MainWindow", "save", nullptr));
     } // retranslateUi

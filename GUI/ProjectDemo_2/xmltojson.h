@@ -6,7 +6,8 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
-
+#include "graph_parser.h"
+/*
 // Element struct definition
 struct Element {
     std::string tag;
@@ -16,6 +17,7 @@ struct Element {
 
 // Function declarations
 Element parseXML(const std::string& xml);
+*/
 void toJSON(const Element& element, std::string& json, int indent = 0);
 
 #endif // XMLTOJSON_H

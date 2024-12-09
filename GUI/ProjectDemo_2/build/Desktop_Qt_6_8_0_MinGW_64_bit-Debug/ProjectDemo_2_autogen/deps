@@ -538,6 +538,10 @@ ProjectDemo_2_autogen/timestamp: \
 	C:/Users/Lenovo/Documents/ProjectDemo_2/compression.h \
 	C:/Users/Lenovo/Documents/ProjectDemo_2/decompression.cpp \
 	C:/Users/Lenovo/Documents/ProjectDemo_2/decompression.h \
+	C:/Users/Lenovo/Documents/ProjectDemo_2/graph.cpp \
+	C:/Users/Lenovo/Documents/ProjectDemo_2/graph.h \
+	C:/Users/Lenovo/Documents/ProjectDemo_2/graph_parser.cpp \
+	C:/Users/Lenovo/Documents/ProjectDemo_2/graph_parser.h \
 	C:/Users/Lenovo/Documents/ProjectDemo_2/main.cpp \
 	C:/Users/Lenovo/Documents/ProjectDemo_2/mainwindow.cpp \
 	C:/Users/Lenovo/Documents/ProjectDemo_2/mainwindow.h \

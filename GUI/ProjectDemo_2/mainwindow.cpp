@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <QMessageBox>
 #include <QFileDialog>
+#include "graph_parser.h"
 #include "xmltojson.h" // Include your XML-related functions
 #include "xmlfunction.h" // Include the header for isXMLBalanced
 #include <fstream>
@@ -12,7 +13,8 @@
 #include "decompression.h" // Include this header to access the decompression functions
 #include "minifyxml.h"
 #include "xml_editor.h"
-
+#include <map>
+#include "graph.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -87,6 +89,8 @@ QString MainWindow::saveTextToTempFile(const QString& text) {
         return QString();
     }
 }
+
+
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -427,4 +431,85 @@ void MainWindow::on_pushButton_7_clicked()
 
 
 }
+
+void MainWindow::processXML(const QString& filePath)
+{
+    // Step 1: Read the contents of the XML file
+    std::string xmlContent = readFile(filePath.toStdString());
+    if (xmlContent.empty()) {
+        QMessageBox::critical(this, "Error", "Failed to read the XML file. Please check the file and try again.");
+        return;
+    }
+
+    // Step 2: Parse the XML and generate the graph
+    Element root = parseXML(xmlContent);
+    std::map<std::string, std::vector<std::string>> userFollowersMap;
+    toMap(root, userFollowersMap);
+
+    // Step 3: Create the graph
+    Graph<std::string> graph(10);
+    generateGraphFromMap(userFollowersMap, graph);
+
+    // Step 4: Visualize the graph and save the result
+    graph.VisualizeGraph("graph.dot");
+
+    // Step 5: Display the DOT content in the output field
+    displayDotFile("graph.dot");
+}
+
+std::string MainWindow::readFile(const std::string& filePath)
+{
+    QFile file(QString::fromStdString(filePath));
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        std::cerr << "Error opening file!" << std::endl;
+        return "";
+    }
+
+    QString content = file.readAll();
+    file.close();
+    return content.toStdString();
+}
+
+void MainWindow::displayDotFile(const std::string& fileName)
+{
+    QFile dotFile(QString::fromStdString(fileName));
+    if (dotFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QString dotContent = dotFile.readAll();
+        ui->textEdit_2->setPlainText(dotContent);  // Display DOT content in the output field
+        dotFile.close();
+    } else {
+        std::cerr << "Error opening DOT file!" << std::endl;
+    }
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    QString inputFilePath;
+
+    // Step 1: Check if the input field has content
+    if (!ui->textEdit->toPlainText().isEmpty()) {
+        inputFilePath = saveTextToTempFile(ui->textEdit->toPlainText());
+        if (inputFilePath.isEmpty()) {
+            QMessageBox::critical(this, "Error", "Failed to save the content to a temporary file.");
+            return; // Exit if temporary file creation fails
+        }
+    } else {
+        // Step 1.2: Open a file dialog to select the XML file
+        inputFilePath = QFileDialog::getOpenFileName(this, "Open XML File", "", "XML Files (*.xml)");
+        if (inputFilePath.isEmpty()) {
+            QMessageBox::information(this, "No File Selected", "Please select a file or input content.");
+            return; // Exit if no file is selected
+        }
+    }
+
+    // Step 2: Process the XML file and generate the graph
+    processXML(inputFilePath);
+}
+
+
+
+
+
+
+
 

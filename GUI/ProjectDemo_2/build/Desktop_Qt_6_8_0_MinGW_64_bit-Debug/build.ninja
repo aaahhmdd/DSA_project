@@ -121,6 +121,22 @@ build CMakeFiles/ProjectDemo_2.dir/xml_parser.cpp.obj: CXX_COMPILER__ProjectDemo
   OBJECT_DIR = CMakeFiles\ProjectDemo_2.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjectDemo_2.dir
 
+build CMakeFiles/ProjectDemo_2.dir/graph.cpp.obj: CXX_COMPILER__ProjectDemo_2_unscanned_Debug C$:/Users/Lenovo/Documents/ProjectDemo_2/graph.cpp || cmake_object_order_depends_target_ProjectDemo_2
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\ProjectDemo_2.dir\graph.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Lenovo/Documents/ProjectDemo_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/ProjectDemo_2_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\ProjectDemo_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProjectDemo_2.dir
+
+build CMakeFiles/ProjectDemo_2.dir/graph_parser.cpp.obj: CXX_COMPILER__ProjectDemo_2_unscanned_Debug C$:/Users/Lenovo/Documents/ProjectDemo_2/graph_parser.cpp || cmake_object_order_depends_target_ProjectDemo_2
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\ProjectDemo_2.dir\graph_parser.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Lenovo/Documents/ProjectDemo_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/ProjectDemo_2_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\ProjectDemo_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProjectDemo_2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProjectDemo_2
@@ -129,7 +145,7 @@ build CMakeFiles/ProjectDemo_2.dir/xml_parser.cpp.obj: CXX_COMPILER__ProjectDemo
 #############################################
 # Link the executable ProjectDemo_2.exe
 
-build ProjectDemo_2.exe: CXX_EXECUTABLE_LINKER__ProjectDemo_2_Debug CMakeFiles/ProjectDemo_2.dir/ProjectDemo_2_autogen/mocs_compilation.cpp.obj CMakeFiles/ProjectDemo_2.dir/main.cpp.obj CMakeFiles/ProjectDemo_2.dir/mainwindow.cpp.obj CMakeFiles/ProjectDemo_2.dir/xmlfunction.cpp.obj CMakeFiles/ProjectDemo_2.dir/xmltojson.cpp.obj CMakeFiles/ProjectDemo_2.dir/compression.cpp.obj CMakeFiles/ProjectDemo_2.dir/decompression.cpp.obj CMakeFiles/ProjectDemo_2.dir/minifyxml.cpp.obj CMakeFiles/ProjectDemo_2.dir/xml_parser.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a || ProjectDemo_2_autogen ProjectDemo_2_autogen_timestamp_deps
+build ProjectDemo_2.exe: CXX_EXECUTABLE_LINKER__ProjectDemo_2_Debug CMakeFiles/ProjectDemo_2.dir/ProjectDemo_2_autogen/mocs_compilation.cpp.obj CMakeFiles/ProjectDemo_2.dir/main.cpp.obj CMakeFiles/ProjectDemo_2.dir/mainwindow.cpp.obj CMakeFiles/ProjectDemo_2.dir/xmlfunction.cpp.obj CMakeFiles/ProjectDemo_2.dir/xmltojson.cpp.obj CMakeFiles/ProjectDemo_2.dir/compression.cpp.obj CMakeFiles/ProjectDemo_2.dir/decompression.cpp.obj CMakeFiles/ProjectDemo_2.dir/minifyxml.cpp.obj CMakeFiles/ProjectDemo_2.dir/xml_parser.cpp.obj CMakeFiles/ProjectDemo_2.dir/graph.cpp.obj CMakeFiles/ProjectDemo_2.dir/graph_parser.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a || ProjectDemo_2_autogen ProjectDemo_2_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

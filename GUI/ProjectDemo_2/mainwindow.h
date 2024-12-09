@@ -32,8 +32,14 @@ private slots:
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_8_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString saveTextToTempFile(const QString& text); // Helper function to save text to a file
+    void processXML(const QString& filePath);
+    std::string readFile(const std::string& filePath);
+    void displayDotFile(const std::string& fileName);
+   // QString saveTextToTempFile(const QString& text);
 };
 #endif // MAINWINDOW_H

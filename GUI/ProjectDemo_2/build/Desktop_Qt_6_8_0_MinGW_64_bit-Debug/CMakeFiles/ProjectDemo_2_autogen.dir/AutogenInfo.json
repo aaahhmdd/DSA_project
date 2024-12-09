@@ -278,6 +278,18 @@
 			null
 		],
 		[
+			"C:/Users/Lenovo/Documents/ProjectDemo_2/graph.h",
+			"MU",
+			"EWIEGA46WW/moc_graph.cpp",
+			null
+		],
+		[
+			"C:/Users/Lenovo/Documents/ProjectDemo_2/graph_parser.h",
+			"MU",
+			"EWIEGA46WW/moc_graph_parser.cpp",
+			null
+		],
+		[
 			"C:/Users/Lenovo/Documents/ProjectDemo_2/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -394,6 +406,12 @@
 		[ "C:/Users/Lenovo/Documents/ProjectDemo_2/compression.cpp", "MU", null ],
 		[
 			"C:/Users/Lenovo/Documents/ProjectDemo_2/decompression.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/Lenovo/Documents/ProjectDemo_2/graph.cpp", "MU", null ],
+		[
+			"C:/Users/Lenovo/Documents/ProjectDemo_2/graph_parser.cpp",
 			"MU",
 			null
 		],

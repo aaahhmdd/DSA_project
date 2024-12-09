@@ -37,6 +37,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         xml_editor.h
         xml_parser.h
         xml_parser.cpp
+        graph.h
+        graph_parser.h
+        graph.cpp
+        graph_parser.cpp
+        graph.tpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ProjectDemo_2 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

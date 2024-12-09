@@ -1,6 +1,6 @@
 #include "xmltojson.h"
 
-
+/*
 // Parse XML into a tree structure of Elements
 Element parseXML(const std::string& xml) {
     Element root;
@@ -36,7 +36,7 @@ Element parseXML(const std::string& xml) {
     }
 
     return root;
-}
+}*/
 
 // Convert an Element tree to JSON format
 void toJSON(const Element& element, std::string& json, int indent) {
