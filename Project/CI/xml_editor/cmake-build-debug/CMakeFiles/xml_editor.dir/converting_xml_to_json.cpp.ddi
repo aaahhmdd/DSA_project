@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/xml_editor.dir/converting_xml_to_json.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

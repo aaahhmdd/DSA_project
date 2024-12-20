@@ -1,0 +1,23 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/xml_editor.dir/check_consistency/check_xml_consistency.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/main.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/formatting/formatting.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/converting_json/converting_xml_to_json.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/minifying/minifying.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/compress/compressing.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/decompress/decompress.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/representing_xml/representing.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/network_analysis/User.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/network_analysis/Post.cpp.obj: dyndep
+
+build CMakeFiles/xml_editor.dir/network_analysis/NetworkAnalysis.cpp.obj: dyndep
+

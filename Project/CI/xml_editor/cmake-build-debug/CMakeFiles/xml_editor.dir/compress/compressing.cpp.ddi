@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/xml_editor.dir/compress/compressing.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

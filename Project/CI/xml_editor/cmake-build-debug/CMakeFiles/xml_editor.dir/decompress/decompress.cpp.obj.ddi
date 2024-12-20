@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\xml_editor.dir\\decompress\\decompress.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

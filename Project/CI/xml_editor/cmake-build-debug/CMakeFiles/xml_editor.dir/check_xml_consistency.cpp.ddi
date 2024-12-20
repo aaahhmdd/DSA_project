@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/xml_editor.dir/check_xml_consistency.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

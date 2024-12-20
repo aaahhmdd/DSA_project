@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\xml_editor.dir\\formatting\\formatting.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}
